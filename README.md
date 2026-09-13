@@ -16,4 +16,5 @@ Sistema simples para cadastro e listagem de funcionários, desenvolvido com:
 - Listagem de funcionários cadastrados
 - Contadores no topo (total, freelancers e fixos)
 
-
+## Board do Projeto
+https://github.com/users/brunotini/projects/1/views/1?layout=board
