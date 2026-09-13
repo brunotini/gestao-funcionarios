@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestao de Funcionarios</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="caixa">
+        <h1>Sistema de Gestao de Funcionarios</h1>
+
+        <div class="painel">
+            <div class="card">
+                <span class="numero" id="totalFuncionarios">0</span>
+                <span class="rotulo">Total de Funcionarios</span>
+            </div>
+            <div class="card">
+                <span class="numero" id="totalFreelas">0</span>
+                <span class="rotulo">Freelancers</span>
+            </div>
+            <div class="card">
+                <span class="numero" id="totalFixos">0</span>
+                <span class="rotulo">Funcionarios Fixos</span>
+            </div>
+        </div>
+
+        <h2>Cadastrar Funcionario</h2>
+
+        <form id="formFuncionario">
+            <div class="campo">
+                <label>Nome:</label>
+                <input type="text" id="nome" placeholder="Digite o nome" required>
+            </div>
+
+            <div class="campo">
+                <label>Tempo na empresa:</label>
+                <input type="text" id="tempo_empresa" placeholder="Ex: 2 anos">
+            </div>
+
+            <div class="campo">
+                <label>Freelancer?</label>
+                <select id="eh_freela">
+                    <option value="nao">Nao</option>
+                    <option value="sim">Sim</option>
+                </select>
+            </div>
+
+            <button type="submit">Cadastrar Funcionario</button>
+        </form>
+
+        <p id="mensagem"></p>
+
+        <h2>Lista de Funcionarios</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Tempo</th>
+                    <th>Freelancer</th>
+                </tr>
+            </thead>
+            <tbody id="tabela"></tbody>
+        </table>
+
+        <p id="vazio">Nenhum funcionario cadastrado ainda.</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
