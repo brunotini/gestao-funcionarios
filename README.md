@@ -1,6 +1,6 @@
 # Gestão de Funcionários
 
-Projeto acadêmico da disciplina de Software Product — AC1.
+Projeto acadêmico de Software Product — AC1.
 
 ## Sobre o projeto
 
