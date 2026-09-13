@@ -16,6 +16,4 @@ Sistema simples para cadastro e listagem de funcionários, desenvolvido com:
 - Listagem de funcionários cadastrados
 - Contadores no topo (total, freelancers e fixos)
 
-## Como rodar o projeto
 
-1. Copie:
