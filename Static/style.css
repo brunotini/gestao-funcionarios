@@ -118,3 +118,38 @@ th {
     color: #888;
     font-size: 14px;
 }
+
+.item-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.btn-excluir {
+    width: auto;
+    padding: 6px 14px;
+    font-size: 0.85em;
+    background: #fee;
+    color: #900;
+    border: 1px solid #fbb;
+}
+
+.campo-inline {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.campo-inline input,
+.campo-inline select {
+    flex: 1;
+    padding: 8px;
+}
+
+.campo-inline button {
+    width: auto;
+    padding: 8px 16px;
+}

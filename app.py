@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify, render_template
 import sqlite3
 import os
+from areas import areas_bp
 
 app = Flask(__name__)
+app.register_blueprint(areas_bp)
 DATABASE = 'database/funcionarios.db'
 
 def init_db():
@@ -10,6 +12,8 @@ def init_db():
     conn = sqlite3.connect(DATABASE)
     with open('database/schema.sql', 'r') as f:
         conn.executescript(f.read())
+    with open('database/schema_areas.sql', 'r') as f:
+        conn.executescript(f.read())   
     conn.commit()
     conn.close()
 
@@ -63,3 +67,4 @@ def listar():
 if __name__ == '__main__':
     init_db()
     app.run(debug=True, port=5000)
+    

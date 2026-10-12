@@ -66,6 +66,30 @@
         </table>
 
         <p id="vazio">Nenhum funcionario cadastrado ainda.</p>
+
+        <h2>Gerenciar Áreas</h2>
+
+        <h3>Criar área</h3>
+        <div class="campo-inline">
+            <input type="text" id="nova-area" placeholder="Nome da área (ex: TI)">
+            <button type="button" onclick="criarArea()">Criar Área</button>
+        </div>
+
+        <h3>Atrelar funcionário a uma área</h3>
+        <div class="campo-inline">
+            <input type="number" id="func-id" placeholder="ID do funcionário">
+            <select id="area-select"></select>
+            <button type="button" onclick="atrelar()">Atrelar</button>
+        </div>
+
+        <h3>Áreas cadastradas</h3>
+        <ul id="lista-areas"></ul>
+
+        <h3>Funcionários por área</h3>
+        <div class="campo-inline">
+            <select id="area-filtro" onchange="carregarFuncionarios()"></select>
+        </div>
+        <ul id="lista-funcionarios"></ul>
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
